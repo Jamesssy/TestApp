@@ -9,10 +9,11 @@ namespace TestApp.Model
     {
         public int Id { get; set; }
         public Email Email { get; set; }
+        public Message Meddelande { get; set; }
         public string Produkt { get; set; }
         public string Antal { get; set; }
         public string Enhet { get; set; }
-        public string Meddelande { get; set; }
+        
 
 
 

@@ -16,5 +16,8 @@ namespace TestApp.Models
 
         public DbSet<Vegetables> Vegetables { get; set; }
         public DbSet<Email> Email { get; set; }
+        public DbSet<Message> Message { get; set; }
+
+
     }
 }
