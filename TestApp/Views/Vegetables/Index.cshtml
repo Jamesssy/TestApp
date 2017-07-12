@@ -1,0 +1,72 @@
+@model IEnumerable<TestApp.Model.Vegetables>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Produkt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Antal)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Enhet)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Meddelande)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Produkt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Antal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Enhet)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Meddelande)
+                </td>
+
+
+
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+
+        <a href="~/startbootstrap-sb-admin-gh-pages/forms.html">~/startbootstrap-sb-admin-gh-pages/forms.html</a>
+        <div class="row">
+            <div class="col-lg-6">
+                <form role="form">
+                    <div class="form-group">
+                        <label>Text Input</label>
+                        <input class="form-control">
+                        <p class="help-block">Example block-level help text here.</p>
+                    </div>
+
+                    </div>
+            </div>
+
+    </tbody>
+</table>

@@ -1,0 +1,42 @@
+@model TestApp.Model.Vegetables
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vegetables</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Produkt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Produkt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Antal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Antal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Enhet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Enhet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Medelande)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Medelande)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

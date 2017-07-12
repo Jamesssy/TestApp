@@ -1,0 +1,56 @@
+@model TestApp.Model.Vegetables
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>Vegetables</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Produkt" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Produkt" class="form-control" />
+                <span asp-validation-for="Produkt" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Antal" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Antal" class="form-control" />
+                <span asp-validation-for="Antal" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Enhet" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Enhet" class="form-control" />
+                <span asp-validation-for="Enhet" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Medelande" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Medelande" class="form-control" />
+                <span asp-validation-for="Medelande" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
